@@ -34,18 +34,18 @@ def turn(board)
     puts "Please enter a valid input!"
     turn(board)
   else 
-    puts "You have won the game!"
+    puts "You are the Winner!"
     exit
   end
 end
 
 # Define your play method below
-
+ 
 def play(board)
-  move_count = 0 
-  while move_count < 9 
-    move_count =+ 1
+  count = 0
+  until count == 9 
     turn(board)
+    count =+ 1
   end
 end
     
