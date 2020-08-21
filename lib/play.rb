@@ -30,9 +30,30 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-  else
+  elsif
+    puts "Please enter a valid input!"
     turn(board)
+  else 
+    puts "You have won the game!"
+    exit
   end
 end
 
 # Define your play method below
+
+def play(board)
+  move_count = 0 
+  while move_count < 9 
+    move_count =+ 1
+    turn(board)
+  end
+end
+    
+
+    
+    #loop do 
+    #turn(board)
+    #move_count =+1 
+    #if move_count == 9
+      #puts "Game Over Man"
+      #break
